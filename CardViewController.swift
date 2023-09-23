@@ -12,8 +12,6 @@ class CardViewController: UIViewController {
     
     @IBOutlet var cardImageView: UIImageView!
     
-    @IBOutlet var buttons: [UIButton]!
-    
     var timer: Timer!
     
     var cards : [UIImage] = Card.allValues
@@ -21,10 +19,6 @@ class CardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         startTimer()
-        for button in buttons {
-            button.layer.cornerRadius = 8
-        }
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
